@@ -1,7 +1,13 @@
 # serieavila
-Projeto para análise da Série Ávila
 
-Links de referência ionic 2:
-https://tableless.com.br/criando-uma-aplicacao-movel-com-ionic-2-e-angular-2-em-dez-passos/
+**Projeto para análise da Série Ávila**
 
-https://www.youtube.com/watch?v=lv_n3sDpXAc
+## Ambiente 
+Projeto gerado com **Ionic CLI v3.3.0**. Para atualizar a versão local:
+> npm install -g ionic cordova
+
+
+## Referências e Documentação
+* [**Documentação Oficial Ionic 3**](https://ionicframework.com/docs/)
+* [Tutorial Tableless](https://tableless.com.br/criando-uma-aplicacao-movel-com-ionic-2-e-angular-2-em-dez-passos/)
+* [Vídeo Aula Ionic](https://www.youtube.com/watch?v=lv_n3sDpXAc)
