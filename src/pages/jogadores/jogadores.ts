@@ -1,3 +1,4 @@
+import { CartolaProvider } from './../../providers/cartola/cartola';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -7,8 +8,12 @@ import { NavController } from 'ionic-angular';
 })
 export class JogadoresPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public cartolaService: CartolaProvider) {
 
+  }
+
+  ionViewDidLoad() {
+    this.cartolaService.getRemoteData();
   }
 
 }
