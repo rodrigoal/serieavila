@@ -16,7 +16,9 @@ export class CartolaProvider {
   }
 
   getRemoteData() {
-    this.http.get('https://api.cartolafc.globo.com/atletas/pontuados').subscribe(data => {
+    
+    //https://api.cartolafc.globo.com/atletas/pontuados
+    this.http.get('https://api.cartolafc.globo.com/mercado/destaques').subscribe(data => {
       console.log(data);
     });
     
