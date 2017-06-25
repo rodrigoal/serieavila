@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
+import { SerieAvilaApp } from './app.component';
 import { HttpModule } from '@angular/http';
 
 import { LigasPage } from '../pages/ligas/ligas';
@@ -12,11 +12,11 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { CartolaProvider } from '../providers/cartola/cartola';
+import { AtletasService } from '../providers/cartola/atletas.service';
 
 @NgModule({
   declarations: [
-    MyApp,
+    SerieAvilaApp,
     LigasPage,
     JogosPage,
     JogadoresPage,
@@ -26,11 +26,11 @@ import { CartolaProvider } from '../providers/cartola/cartola';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(SerieAvilaApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    SerieAvilaApp,
     LigasPage,
     JogosPage,
     JogadoresPage,
@@ -40,8 +40,8 @@ import { CartolaProvider } from '../providers/cartola/cartola';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CartolaProvider
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AtletasService
   ]
 })
-export class AppModule {}
+export class AppModule { }

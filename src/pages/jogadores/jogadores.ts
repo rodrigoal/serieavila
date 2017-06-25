@@ -1,4 +1,4 @@
-import { CartolaProvider } from './../../providers/cartola/cartola';
+import { AtletasService } from './../../providers/cartola/atletas.service';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -8,12 +8,14 @@ import { NavController } from 'ionic-angular';
 })
 export class JogadoresPage {
 
-  constructor(public navCtrl: NavController, public cartolaService: CartolaProvider) {
+  constructor(public navCtrl: NavController, public atletaService: AtletasService) {
 
   }
 
   ionViewDidLoad() {
-    this.cartolaService.getRemoteData();
+    this.atletaService.getPontuados().then((response) => {
+      console.log(response);
+    });
   }
 
 }
