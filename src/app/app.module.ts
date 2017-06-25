@@ -12,7 +12,9 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
 import { AtletasService } from '../providers/cartola/atletas.service';
+import { MercadoService } from '../providers/cartola/mercado.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,8 @@ import { AtletasService } from '../providers/cartola/atletas.service';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AtletasService
+    AtletasService,
+    MercadoService
   ]
 })
 export class AppModule { }
