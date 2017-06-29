@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AtletasService } from '../providers/cartola/atletas.service';
 import { MercadoService } from '../providers/cartola/mercado.service';
+import { PartidaService } from '../providers/cartola/partida.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MercadoService } from '../providers/cartola/mercado.service';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AtletasService,
-    MercadoService
+    MercadoService,
+    PartidaService
   ]
 })
 export class AppModule { }
