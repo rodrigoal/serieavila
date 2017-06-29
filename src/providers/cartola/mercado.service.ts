@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
+import { DestaqueModel, StatusMercado } from '../../models/mercado.models';
+
 @Injectable()
 export class MercadoService {
     private headers: Headers;
@@ -14,20 +16,10 @@ export class MercadoService {
             .toPromise()
             .then(response => response.json() as Array<DestaqueModel>);
     }
-}
 
-export class DestaqueModel {
-    Atleta: AtletaDestaqueModel;
-    escalacoes: number;
-    clube: string;
-    escudo_clube: string;
-    posicao: string;
-}
-
-export interface AtletaDestaqueModel {
-    atleta_id: number,
-    nome: string,
-    apelido: string,
-    foto: string
-    preco_editorial: number
+    public getStatus(): Promise<StatusMercado> {
+        return this.http.get(this.url + '/status')
+            .toPromise()
+            .then(response => response.json() as StatusMercado);
+    }
 }
