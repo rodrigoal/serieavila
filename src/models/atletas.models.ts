@@ -1,18 +1,20 @@
-import { ClubeModel } from './clube.model'
+import { ClubeModel } from './clube.models'
 
 export class AtletasPontuadosModel {
-    rodada: number;
-    atletas: Array<AtletaPontuadoModel>;
-    clubes: Array<ClubeModel>;
-    total_atletas: number;
+    constructor(
+        public rodada: number = 0,
+        public atletas: Array<AtletaPontuadoModel> = [],
+        public clubes: Array<ClubeModel> = [],
+        public total_atletas: number = 0) { }
 }
 
 export class AtletaPontuadoModel {
-    apelido: string;
-    pontuacao: number;
-    scout: Array<any>;
-    foto: string;
-    posicao_id: number;
-    clube_id: number;
+    constructor(
+        public apelido: string = null,
+        public pontuacao: number = 0,
+        public scout: Array<any> = [],
+        public foto: string = null,
+        public posicao_id: number = 0,
+        public clube_id: number = 0) { }
 }
 
