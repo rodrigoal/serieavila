@@ -1,4 +1,4 @@
-import { ClubeModel } from './clube.model';
+import { ClubeModel } from './clube.models';
 
 export class PartidaCollectionModel {
     partidas: Array<PartidaModel>;
